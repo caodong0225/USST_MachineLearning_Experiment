@@ -68,9 +68,9 @@ def plot_theta(train_data, valid_data, model_value):
 
     # 计算损失值
     loss = np.zeros_like(theta0)
-    for index0, theta0 in enumerate(theta0_range):
-        for index1, theta1 in enumerate(theta1_range):
-            loss[index0, index1] = calculate_loss(train_data, valid_data, [theta0, theta1])
+    for index0, theta0_ in enumerate(theta0_range):
+        for index1, theta1_ in enumerate(theta1_range):
+            loss[index0, index1] = calculate_loss(train_data, valid_data, [theta0_, theta1_])
     # 绘制3D散点图
     fig = plt.figure(figsize=(10, 5))
     ax1 = fig.add_subplot(121, projection='3d')
