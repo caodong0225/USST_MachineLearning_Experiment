@@ -1,7 +1,12 @@
+"""
+Author: caodong0225
+Date: 2024-06-04
+Description: 多层感知机训练代码
+"""
 import numpy as np
 import random
-from dataset import dataset, label
 import os
+from dataset import dataset, label
 np.set_printoptions(threshold=np.inf)#不显示省略号
 
 class Ann:
