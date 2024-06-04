@@ -1,5 +1,7 @@
 """
-这是一个简单的线性回归模型
+Author: caodong0225
+Date: 2024-06-04
+Description: 该文件的功能是训练模型
 """
 import random
 import matplotlib.pyplot as plt
@@ -54,9 +56,9 @@ def plot_loss(loss):
 def plot_theta(train_data, valid_data, model_value):
     """
     该函数的功能是绘制参数空间
-    :param train_data:
-    :param valid_data:
-    :param model_value:
+    :param train_data: 训练数据
+    :param valid_data: 验证数据
+    :param model_value: 模型参数
     :return:
     """
     # 生成参数范围
