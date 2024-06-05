@@ -2,8 +2,6 @@
 # Add files or directories to the blacklist. They should be base names, not paths.
 ignore=venv
 
-# Specify a configuration file.
-init-hook='import sys; sys.path.extend(["./machine_experiment", "./machine_experiment/KNN", "./machine_experiment/mlp", "./machine_experiment/multiple_LSM", "./machine_experiment/principal_component_analysis", "./machine_experiment/regularized_logistic_regression", "./machine_experiment/single_LSM"])'
-
 [MESSAGES CONTROL]
+disable=no-name-in-module
 disable=R0801
