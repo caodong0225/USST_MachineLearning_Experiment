@@ -19,8 +19,8 @@ def find_closest_centroids(x_, centroids_):
     idx_ = []
     for x_value in x_:
         idx_.append(min(range(len(centroids_)),
-                        key=lambda i: np.sum((x_value -
-                                              np.array(centroids_[i])) ** 2)))
+                        key=lambda i, x_v=x_value: np.sum((x_v -
+                                                           np.array(centroids_[i])) ** 2)))
     return idx_
 
 
