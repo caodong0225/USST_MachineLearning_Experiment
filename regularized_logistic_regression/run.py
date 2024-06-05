@@ -126,17 +126,17 @@ def calculate_gradient(inp, out, model_theta, regularization_weight):
     return res
 
 
-def train(inp, out, model_theta, learning_rate, training_epochs, regularization_weight):
+def train(inp, out, model_theta, training_param):
     """
     该函数的功能是训练模型
     :param inp: 模型输入值
     :param out: 模型预测值
     :param model_theta: 模型参数
-    :param learning_rate: 学习率
-    :param training_epochs: 训练次数
-    :param regularization_weight: 正则化权重
+    :param training_param 训练常量
     :return: 训练后的模型参数
     """
+    learning_rate, training_epochs, regularization_weight \
+        = training_param[0], training_param[1], training_param[2]
     # 该函数的功能是训练模型
     loss = []
     for _ in range(training_epochs):
@@ -190,5 +190,5 @@ if __name__ == "__main__":
     for _ in data:
         x.append(map_feature(_[:2], DIMENSION))
         y.append(_[-1])
-    theta = train(x, y, theta, ALPHA, EPOCHS, REGULARIZATION_PARAMETER)
+    theta = train(x, y, theta, [ALPHA, EPOCHS, REGULARIZATION_PARAMETER])
     plot_result(data, theta, DIMENSION)
