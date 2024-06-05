@@ -1,7 +1,0 @@
-[MASTER]
-# Add files or directories to the blacklist. They should be base names, not paths.
-ignore=venv
-
-[MESSAGES CONTROL]
-disable=no-name-in-module
-disable=R0801
