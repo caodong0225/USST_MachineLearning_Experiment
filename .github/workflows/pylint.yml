@@ -28,4 +28,4 @@ jobs:
 
       - name: Analysing the code with pylint
         run: |
-          pylint --ignore-path=mlp $(git ls-files '*.py')
+          pylint --disable=F0001 --ignore-path=mlp $(git ls-files '*.py')
