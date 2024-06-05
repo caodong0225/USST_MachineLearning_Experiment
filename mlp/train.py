@@ -7,7 +7,9 @@ import numpy as np
 import random
 import os
 from dataset import dataset, label
-np.set_printoptions(threshold=np.inf)#不显示省略号
+
+np.set_printoptions(threshold=np.inf)  # 不显示省略号
+
 
 class Ann:
     def __init__(self):
@@ -128,7 +130,8 @@ class Ann:
                 for j in range(len(activemod) - 1):
                     layerback.insert(0, self.derivative[activemod[-2 - j]](
                         self.dot(layerback[-1 - j], np.array(self.grad[-1 - j]).T)) * self.dot(layerback[-1 - j],
-                                                                                     np.array(self.grad[-1 - j]).T))
+                                                                                               np.array(self.grad[
+                                                                                                            -1 - j]).T))
                 if len(wgrad) == 0:
                     for arr in range(len(layerback)):
                         wgrad.append(np.outer(layerback[arr], layer[arr]))

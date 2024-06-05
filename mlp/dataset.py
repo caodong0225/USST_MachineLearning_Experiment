@@ -1,10 +1,16 @@
+"""
+Author: caodong0225
+Date: 2024-06-05
+Description: 读取数据集部分
+
+"""
 import numpy as np
-with open("data.txt") as f:
+with open("data.txt", encoding="utf-8") as f:
     data_read = f.readlines()
 dataset = []
 for _ in data_read:
     dataset.append(list(map(float, _.split())))
-with open("label.txt") as f:
+with open("label.txt", encoding="utf-8") as f:
     data_read = f.readlines()
 label = []
 for _ in data_read:
